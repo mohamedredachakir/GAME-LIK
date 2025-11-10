@@ -13,14 +13,15 @@
     <link rel="stylesheet" href="output.css" />
     <title>Document</title>
   </head>
-  <body class="p-4 bg-[#fffbfb] bg-[url('img/1.png')] h-[100vh] min-h-screen flex-col">
+  <body class="p-4 bg-[#fffbfb]  h-[100vh] min-h-screen flex-col">
     <header class="m-4">
-      <nav class="w-full h-[70px] bg-[#4E4950] rounded-lg flex justify-between items-center px-4">
+      <nav class="w-full h-[70px] border bg-slate-800 border-[#E51E1B] rounded-lg flex justify-between items-center px-4">
         <a href="index.html"><img src="img/logo-gamlik.png" width="100 "></a>
         <div class="text-white sm:flex justify-evenly gap-16">
           <a href="fav.html"><button class="transform hover:scale-110 duration-300"><i class="fa-solid fa-heart"></i></button></a>
           <a href="#inputsearch"><button class="transform hover:scale-110 duration-300"><i class="fa-solid fa-magnifying-glass"></i></button></a>
-          <a id="btnmode" class="transform hover:scale-110 duration-300"><button>MODE</button></a>
+          <button id="btnmode" class="transform hover:scale-110 duration-300" onclick="changemode()">MODE</button>
+
         </div>
       </nav>
     </header>
@@ -57,25 +58,22 @@
       </section>
 
       <section class="mt-4">
-        <div id="cards" class="grid grid-cols-1 gap-[12px] sm:grid-cols-2 sm:gap-5">
-          <!-- <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-                    <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-                    <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-                    <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div>
-          <div class="bg-[#391312] border border-[#E51E1B] p-4 rounded shadow text-white"><h1>card</h1></div> -->
+        <div id="cardshome" class="grid grid-cols-1 gap-[12px] sm:grid-cols-2 sm:gap-5">
 
         </div>
+        <div id="gameModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center">
+      <div class="bg-white p-6 rounded-lg w-11/12 max-w-lg relative sm: mt-[180px] ">
+       <button id="closeModal" class="absolute top-2 right-2 text-xl font-bold">X</button>
+    <img id="modalImage" class="h-48 w-full object-cover mb-4" src="">
+    <button id="btnFav" class="bg-red-500 text-white px-4 py-2 rounded ">Add to Favorites</button>
+    <h2 id="modalName" class="text-2xl font-bold mb-2"></h2>
+    <p id="modalGenre" class="mb-2"></p>
+    <p id="modalPlatforms" class="mb-2"></p>
+    <p id="modalRating" class="mb-2"></p>
+    <p id="modalDescription" class="mb-4"></p>
+    
+  </div>
+</div>
       </section>
     </main>
     <footer class="mt-4 relative bottom-0 sm:mb-0">
@@ -83,7 +81,9 @@
         <input type="text">
         <button>send</button>
       </div>
+      
     </footer>
-
+    <script src="app.js"></script>
   </body>
+
 </html>
