@@ -13,77 +13,159 @@
     <link rel="stylesheet" href="output.css" />
     <title>Document</title>
   </head>
-  <body class="p-4 bg-[#fffbfb]  h-[100vh] min-h-screen flex-col">
+  <body class="p-4 bg-[#fffbfb] h-[100vh] min-h-screen flex-col">
     <header class="m-4">
-      <nav class="w-full h-[70px] border bg-slate-800 border-[#E51E1B] rounded-lg flex justify-between items-center px-4">
-        <a href="index.html"><img src="img/logo-gamlik.png" width="100 "></a>
+      <nav
+        class="w-full h-[70px] border bg-slate-800  rounded-lg flex justify-between items-center px-4"
+      >
+        <a href="index.html"><img src="img/logo-gamlik.png" width="100 " /></a>
         <div class="text-white sm:flex justify-evenly gap-16">
-          <a href="fav.html"><button class="transform hover:scale-110 duration-300"><i class="fa-solid fa-heart"></i></button></a>
-          <a href="#inputsearch"><button class="transform hover:scale-110 duration-300"><i class="fa-solid fa-magnifying-glass"></i></button></a>
-          <button id="btnmode" class="transform hover:scale-110 duration-300" onclick="changemode()">MODE</button>
-
+          <a href="fav.html"
+            ><button class="transform hover:scale-110 duration-300">
+              <i class="fa-solid fa-heart"></i></button
+          ></a>
+          <a href="#inputsearch"
+            ><button class="transform hover:scale-110 duration-300">
+              <i class="fa-solid fa-magnifying-glass"></i></button
+          ></a>
+          <button
+            id="btnmode"
+            class="transform hover:scale-110 duration-300"
+            onclick="changemode()"
+          >
+            MODE
+          </button>
         </div>
       </nav>
     </header>
-    
+
     <main class="flex-1">
       <section id="filter" class="mt-5">
         <nav>
-          <div class=" flex justify-evenly">
-            <input id="inputsearch" class="bg-slate-800 w-[400px] h-[50px] rounded-md pl-4 text-white " type="text" placeholder="search...">
-            <button id="btnsearch" class="h-[50px] w-[60px] bg-slate-800 text-white rounded-md text-xs">search</button>
+          <div class="flex justify-evenly">
+            <input
+              id="inputsearch"
+              class="bg-slate-800 w-[400px] h-[50px] rounded-md pl-4 text-white"
+              type="text"
+              placeholder="search..."
+            />
+            <button
+              id="btnsearch"
+              class="h-[50px] w-[60px] bg-slate-800 text-white rounded-md text-xs"
+            >
+              search
+            </button>
           </div>
-          
-          <div class="flex flex-col items-center gap-[12px] sm:flex-row sm:justify-evenly mt-4">
+
+          <div
+            class="flex flex-col items-center gap-[12px] sm:flex-row sm:justify-evenly mt-4"
+          >
             <div class="">
-            <button id="genreall" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">ALL</button>
-            <button id="genrerpg" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">RPG</button>
-            <button id="genresumilation" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[100px] rounded-md">Simulation</button>
-            <button id="genreaction" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">Action</button>
-          </div>
-          <div class="">
-            <button id="platformall" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">ALL</button>
-            <button id="platformpc" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">PC</button>
-            <button id="platformps" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[100px] rounded-md">PS5</button>
-            <button id="platformxbox" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">Xbox</button>
-          </div>
-          <div class="">
-            <button id="rateall" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">ALL</button>
-            <button id="rate9" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">9</button>
-            <button id="rate8" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">8</button>
-            <button id="rate7" class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md">7</button>
-          </div>
+              <button
+                id="genreall"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md"
+              >
+                ALL
+              </button>
+              <button
+                id="genreRacing"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md"
+              >
+                Racing
+              </button>
+              <button
+                id="genreStrategy"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[100px] rounded-md"
+              >
+                Strategy
+              </button>
+              <button
+                id="genreaction"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md"
+              >
+                Action
+              </button>
+            </div>
+            <div class="">
+              <button
+                id="platformall"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md"
+              >
+                ALL
+              </button>
+              <button
+                id="platformpc"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md"
+              >
+                PC
+              </button>
+              <button
+                id="platformps"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[100px] rounded-md"
+              >
+                PS5
+              </button>
+              <button
+                id="platformxbox"
+                class="transform hover:scale-110 duration-300 bg-slate-800 text-white h-[40px] w-[50px] rounded-md"
+              >
+                Xbox
+              </button>
+            </div>
           </div>
         </nav>
       </section>
 
-      <section class="mt-4">
-        <div id="cardshome" class="grid grid-cols-1 gap-[12px] sm:grid-cols-2 sm:gap-5">
-
+      <section
+        class="mt-4 min-h-[74vh flex flex-col items-center justify-center"
+      >
+        <div
+          id="cardshome"
+          class="grid grid-cols-1 gap-[12px] items-center sm:grid-cols-5 sm:gap-18"
+        ></div>
+        
+        <div
+          id="gameModal"
+          class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4 z-50">
+          
+          <div
+            class="bg-white p-6 rounded-lg text-[14px] sm:text-[16px] w-full max-w-md sm:max-w-2xl relative shadow-lg overflow-y-auto max-h-[90vh]">  
+            <button id="closeModal" class="absolute top-3 right-3 text-xl font-bold text-gray-700 hover:text-red-500"> X </button>            
+            <img id="modalImage" class="h-48 w-full object-cover rounded mb-4"  src="" />
+            <h2 id="modalName" class="text-xl sm:text-2xl font-bold mb-2 w-full" ></h2>
+            <p id="modalGenre" class="mb-2 text-gray-700"></p>
+            <p id="modalPlatforms" class="mb-2 text-gray-700"></p>
+            <p id="modalRating" class="mb-2 text-gray-700"></p>
+            <p  id="modalDescription"  class="mb-4 text-gray-600 leading-relaxed" ></p>
+            <button id="btnFav" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded w-full sm:w-auto">Add to Favorites</button>
+          </div>
         </div>
-        <div id="gameModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center">
-      <div class="bg-white p-6 rounded-lg w-11/12 max-w-lg relative sm: mt-[180px] ">
-       <button id="closeModal" class="absolute top-2 right-2 text-xl font-bold">X</button>
-    <img id="modalImage" class="h-48 w-full object-cover mb-4" src="">
-    <button id="btnFav" class="bg-red-500 text-white px-4 py-2 rounded ">Add to Favorites</button>
-    <h2 id="modalName" class="text-2xl font-bold mb-2"></h2>
-    <p id="modalGenre" class="mb-2"></p>
-    <p id="modalPlatforms" class="mb-2"></p>
-    <p id="modalRating" class="mb-2"></p>
-    <p id="modalDescription" class="mb-4"></p>
-    
-  </div>
-</div>
+
+        <div class="flex justify-center gap-[50px] mt-4">
+          <button
+            id="btnleft"
+            class="bg-slate-600 h-[40px] w-[60px] rounded-md text-white"
+          >
+            <i class="fa-solid fa-left-long"></i>
+          </button>
+          <button
+            id="btnright"
+            class="bg-slate-600 h-[40px] w-[60px] rounded-md text-white"
+          >
+            <i class="fa-solid fa-right-long"></i>
+          </button>
+        </div>
       </section>
     </main>
-    <footer class="mt-4 relative bottom-0 sm:mb-0">
-      <div class="w-full h-[70px] bg-[#4E4950] rounded-lg flex justify-center gap-[12px] items-center px-4">
-        <input type="text">
-        <button>send</button>
+    <footer class="mt-4 sm:mb-0 flex justify-center">
+      <div
+        class="w-full h-[70px] bg-slate-800 rounded-lg flex justify-center gap-[6px] items-center px-4"
+      >
+        <input class="rounded-md h-[40px]" type="text" />
+        <button class="bg-white w-[50px] h-[40px] rounded-md text-[10px]">send</button>
       </div>
-      
     </footer>
     <script src="app.js"></script>
+    <script src="logichome.js"></script>
   </body>
-
 </html>
